@@ -1,0 +1,25 @@
+{
+  "name": "tree-sitter-imp",
+  "version": "1.0.0",
+  "description": "Tree-sitter grammar for IMP",
+  "main": "bindings/node",
+  "author": "Ben Siraphob",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.15.0",
+    "node-gyp": "^8.4.1"
+  },
+  "scripts": {
+    "build": "tree-sitter generate && node-gyp build"
+  },
+  "tree-sitter": [
+    {
+      "file-types": [
+        "imp"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    }
+  ]
+}
