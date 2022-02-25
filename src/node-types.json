@@ -52,17 +52,24 @@
   {
     "type": "asgn",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
           "type": "aexp",
-          "named": true
-        },
-        {
-          "type": "id",
           "named": true
         }
       ]

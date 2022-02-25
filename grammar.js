@@ -17,7 +17,7 @@ module.exports = grammar({
             $.while,
         ),
         skip: $ => 'skip',
-        asgn: $ => seq($.id,':=',$.aexp),
+        asgn: $ => seq(field('name',$.id),':=',$.aexp),
         id: $ => /[a-z]+/,
         seq: $ => prec.right(1,seq($.stmt,';',$.stmt,optional(';'))),
         if: $ => seq('if',
@@ -43,7 +43,6 @@ module.exports = grammar({
         plus: $ => prec.left(1,seq($.aexp,'+',$.aexp)),
         minus: $ => prec.left(1,seq($.aexp,'-',$.aexp)),
         times: $ => prec.left(2,seq($.aexp,'*',$.aexp)),
-
         bexp: $ => choice(
             'true',
             'false',

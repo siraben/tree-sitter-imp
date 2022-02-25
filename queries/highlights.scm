@@ -1,3 +1,3 @@
-[ "while" "end" "if" "then" "else" ] @keyword 
+[ "while" "end" "if" "then" "else" "do" ] @keyword
 (num) @number
-(id) @variable.builtin
+(id) @identifier
