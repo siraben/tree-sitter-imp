@@ -21,8 +21,7 @@ x := 3; skip
       (stmt
         (asgn
           (id)
-          (aexp
-            (num))))
+          (num)))
       (stmt
         (skip)))))
 
@@ -38,20 +37,13 @@ x := 1 * 2 + 5 - 4
   (stmt
     (asgn
       (id)
-      (aexp
-        (minus
-          (aexp
-            (plus
-              (aexp
-                (times
-                  (aexp
-                    (num))
-                  (aexp
-                    (num))))
-              (aexp
-                (num))))
-          (aexp
-            (num)))))))
+      (minus
+        (plus
+          (times
+            (num)
+            (num))
+          (num))
+        (num)))))
 
 ================================================================================
 prog
@@ -64,47 +56,30 @@ if x = y + 1 + 2 - y * 6 + 3 then x := x * 1; y := 0 else skip end
 (program
   (stmt
     (if
-      (bexp
-        (eqb
-          (aexp
-            (id))
-          (aexp
+      (eqb
+        (id)
+        (plus
+          (minus
             (plus
-              (aexp
-                (minus
-                  (aexp
-                    (plus
-                      (aexp
-                        (plus
-                          (aexp
-                            (id))
-                          (aexp
-                            (num))))
-                      (aexp
-                        (num))))
-                  (aexp
-                    (times
-                      (aexp
-                        (id))
-                      (aexp
-                        (num))))))
-              (aexp
-                (num))))))
+              (plus
+                (id)
+                (num))
+              (num))
+            (times
+              (id)
+              (num)))
+          (num)))
       (stmt
         (seq
           (stmt
             (asgn
               (id)
-              (aexp
-                (times
-                  (aexp
-                    (id))
-                  (aexp
-                    (num))))))
+              (times
+                (id)
+                (num))))
           (stmt
             (asgn
               (id)
-              (aexp
-                (num))))))
+              (num)))))
       (stmt
         (skip)))))

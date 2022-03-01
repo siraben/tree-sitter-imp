@@ -1,6 +1,7 @@
+// Factorial program
 z := x;
 y := 1;
 while ~(z = 0) do
   y := y * z;
   z := z - 1;
-end 
+end

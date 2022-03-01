@@ -1,49 +1,26 @@
 [
   {
-    "type": "aexp",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "aexp",
-          "named": true
-        },
-        {
-          "type": "id",
-          "named": true
-        },
-        {
-          "type": "minus",
-          "named": true
-        },
-        {
-          "type": "num",
-          "named": true
-        },
-        {
-          "type": "plus",
-          "named": true
-        },
-        {
-          "type": "times",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "andb",
     "named": true,
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "bexp",
+          "type": "andb",
+          "named": true
+        },
+        {
+          "type": "eqb",
+          "named": true
+        },
+        {
+          "type": "leb",
+          "named": true
+        },
+        {
+          "type": "negb",
           "named": true
         }
       ]
@@ -69,38 +46,23 @@
       "required": true,
       "types": [
         {
-          "type": "aexp",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "bexp",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "andb",
+          "type": "id",
           "named": true
         },
         {
-          "type": "bexp",
+          "type": "minus",
           "named": true
         },
         {
-          "type": "eqb",
+          "type": "num",
           "named": true
         },
         {
-          "type": "leb",
+          "type": "plus",
           "named": true
         },
         {
-          "type": "negb",
+          "type": "times",
           "named": true
         }
       ]
@@ -115,7 +77,23 @@
       "required": true,
       "types": [
         {
-          "type": "aexp",
+          "type": "id",
+          "named": true
+        },
+        {
+          "type": "minus",
+          "named": true
+        },
+        {
+          "type": "num",
+          "named": true
+        },
+        {
+          "type": "plus",
+          "named": true
+        },
+        {
+          "type": "times",
           "named": true
         }
       ]
@@ -136,12 +114,40 @@
         ]
       },
       "condition": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
           {
-            "type": "bexp",
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "andb",
             "named": true
+          },
+          {
+            "type": "eqb",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "leb",
+            "named": true
+          },
+          {
+            "type": "negb",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
           }
         ]
       },
@@ -166,7 +172,23 @@
       "required": true,
       "types": [
         {
-          "type": "aexp",
+          "type": "id",
+          "named": true
+        },
+        {
+          "type": "minus",
+          "named": true
+        },
+        {
+          "type": "num",
+          "named": true
+        },
+        {
+          "type": "plus",
+          "named": true
+        },
+        {
+          "type": "times",
           "named": true
         }
       ]
@@ -181,7 +203,23 @@
       "required": true,
       "types": [
         {
-          "type": "aexp",
+          "type": "id",
+          "named": true
+        },
+        {
+          "type": "minus",
+          "named": true
+        },
+        {
+          "type": "num",
+          "named": true
+        },
+        {
+          "type": "plus",
+          "named": true
+        },
+        {
+          "type": "times",
           "named": true
         }
       ]
@@ -193,10 +231,22 @@
     "fields": {},
     "children": {
       "multiple": false,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "bexp",
+          "type": "andb",
+          "named": true
+        },
+        {
+          "type": "eqb",
+          "named": true
+        },
+        {
+          "type": "leb",
+          "named": true
+        },
+        {
+          "type": "negb",
           "named": true
         }
       ]
@@ -211,7 +261,23 @@
       "required": true,
       "types": [
         {
-          "type": "aexp",
+          "type": "id",
+          "named": true
+        },
+        {
+          "type": "minus",
+          "named": true
+        },
+        {
+          "type": "num",
+          "named": true
+        },
+        {
+          "type": "plus",
+          "named": true
+        },
+        {
+          "type": "times",
           "named": true
         }
       ]
@@ -287,7 +353,23 @@
       "required": true,
       "types": [
         {
-          "type": "aexp",
+          "type": "id",
+          "named": true
+        },
+        {
+          "type": "minus",
+          "named": true
+        },
+        {
+          "type": "num",
+          "named": true
+        },
+        {
+          "type": "plus",
+          "named": true
+        },
+        {
+          "type": "times",
           "named": true
         }
       ]
@@ -308,12 +390,40 @@
         ]
       },
       "condition": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
           {
-            "type": "bexp",
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "andb",
             "named": true
+          },
+          {
+            "type": "eqb",
+            "named": true
+          },
+          {
+            "type": "false",
+            "named": false
+          },
+          {
+            "type": "leb",
+            "named": true
+          },
+          {
+            "type": "negb",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": false
           }
         ]
       }
@@ -358,6 +468,10 @@
   {
     "type": "=<",
     "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
   },
   {
     "type": "do",
