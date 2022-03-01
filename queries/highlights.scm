@@ -1,3 +1,5 @@
 [ "while" "end" "if" "then" "else" "do" ] @keyword
 (num) @number
-(id) @identifier
+(id) @variable.builtin
+[ "*" "+" "-" "=" ":=" "~" ] @operator
+(comment) @comment
